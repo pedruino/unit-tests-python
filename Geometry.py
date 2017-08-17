@@ -10,6 +10,9 @@ class Line:
     def __eq__(self, other):
         return self.__dict__ == other.__dict__
 
+    def __hash__(self):
+        return hash((self.start, self.end))
+
 
 class Vector:
     def __init__(self, x, y):
@@ -27,6 +30,9 @@ class Vector:
 
     def __eq__(self, other):
         return self.__dict__ == other.__dict__
+
+    def __hash__(self):
+        return hash((self.x, self.y))
 
     def __neg__(self):
         return Vector(-self.x, -self.y)
