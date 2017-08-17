@@ -1,12 +1,9 @@
 import unittest
 
-from ddt import ddt
-
 from Geometry import Vector, Line
 from GrooveEvaluator import GrooveEvaluator
 
 
-@ddt
 class GroovePassesCalculatorTest(unittest.TestCase):
     # tool_thickness = 10, groove_width = 10
     def test_case_1(self):
